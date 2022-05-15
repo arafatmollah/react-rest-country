@@ -1,0 +1,14 @@
+.countries{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.country{
+    background-color: aliceblue;
+    padding: 20px;
+    margin: 20px;
+
+}
+img{
+    height: 150px;
+    width: 250px;
+}

@@ -1,25 +1,43 @@
-import logo from './logo.svg';
+// import { useEffect, useState } from 'react';
 import './App.css';
+import Barca from './components/Barca/Barca';
+import Country from './components/Country/Country'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>Hello From Rest Country</p>
+      <Country></Country>
+      <Barca></Barca>
     </div>
   );
 }
+
+// function Country() {
+//   const [country, setCountry] = useState([]);
+
+//   useEffect(() => {
+//     fetch('https://restcountries.com/v3.1/all')
+//       .then(res => res.json())
+//       .then(data => setCountry(data));
+//   },[])
+//   return (
+//     <div>
+//       <p>Country: {country.length}</p>
+//       {
+//         country.map(countries => <Information name={countries.name.common} capital={countries.capital}></Information>)
+//       }
+//     </div>
+//   )
+// }
+
+// function Information(props) {
+//   return (
+//     <div className='info'>
+//       <h4>name: {props.name}</h4>
+//       <p>capital: { props.capital}</p>
+//     </div>
+//   )
+// }
 
 export default App;
